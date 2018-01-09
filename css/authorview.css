@@ -1,0 +1,95 @@
+﻿/*test*/
+
+TEI { display:block; }
+
+teiHeader {
+    border:solid #bdbdbd 1px;
+    display:block;
+    margin:2em;
+    background-color:#e0e0e0;
+}
+
+fileDesc > titleStmt > title {
+    display:block;
+    font-weight:bold;
+    font-size:1.5em;
+}
+
+fileDesc > titleStmt > author {
+    display:block;
+    font-style:italic;
+    font-size:1.3em;
+    margin-bottom:0.5em;
+}
+
+persName{
+}
+
+persName surname:after {
+    content:",";
+}
+
+text {
+    display:block;
+    margin:2em;
+}
+
+pb {
+    display:none;
+}
+
+div[type="chapter"]{
+    display:block;
+     border: 1px solid black;
+     margin-bottom:0.7em;
+}
+
+ab{
+    display:block;
+}
+
+ab[type="woodcut"]{
+    background-color:#bcaaa4;
+}
+
+ab[type="mainText"]{
+    background-color:#c5e1a5;
+}
+
+ab[type="chapterTitle"]{
+    background-color:#558b2f;
+}
+
+ab[type="motto"]{
+    background-color:#fff59d;
+}
+
+ab[type="signatureMark"]{
+    background-color:#ef9a9a;
+}
+
+figure{
+    content:attr(facs);
+}
+
+head {
+    display:block;
+    font-weight:bold;
+    font-size:1.2em;
+    margin-bottom:0.5em;
+}
+lg {
+    display:block;
+    margin-bottom:0.5em;
+}
+l {
+    display:block;
+}
+hi[rend="italic"] { 
+    font-style:italic;
+    -oxy-display-tags:none;
+}
+hi[rend="bold"] { 
+    font-weight:bold;
+    -oxy-display-tags:none;
+}
