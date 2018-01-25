@@ -34,17 +34,11 @@
 
                     <!-- make a group out of everything inside of p, ending with a linebreak -->
                     <xsl:for-each-group select="node()" group-ending-with="lb">
-
-                        <!-- test, if current-group contains text. Don't create line if not.
-                        DOESN'T WORK FOR TEXT AFTER <pb/>-ELEMENT -->
-                        <xsl:if test="string()">
                             
                             <!-- wrap line around current-group -->
                             <l>
                                 <xsl:apply-templates select="current-group()"/>
                             </l>
-                        </xsl:if>
-
                     </xsl:for-each-group>
                 </lg>
 

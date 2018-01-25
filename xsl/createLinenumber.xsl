@@ -15,13 +15,13 @@
     <xsl:template match="l">
 
         <xsl:copy>
-            <!-- only create attribute for mainText lines. -->
-            <xsl:if test="ancestor::ab[@type = 'mainText']">
+            <!-- only create attribute for mainText lines which are normalized -->
+            <xsl:if test="ancestor::reg[ancestor::ab[@type='mainText']]">
 
                 <xsl:attribute name="n">
 
                     <!-- count all lines within mainText boxes on any level, starting number from ancestor chapter div -->
-                    <xsl:number count="ab[@type = 'mainText']//l" level="any" from="div"/>
+                    <xsl:number count="ab[@type = 'mainText']//reg//l" level="any" from="div"/>
                 </xsl:attribute>
             </xsl:if>
             <xsl:apply-templates select="@* | node()"/>
