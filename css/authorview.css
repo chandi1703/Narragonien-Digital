@@ -22,7 +22,31 @@ fileDesc > titleStmt > author {
     margin-bottom:0.5em;
 }
 
-persName{
+
+body{
+    counter-reset:section;
+}
+
+pb::before{
+  counter-increment: section;                  /* Erhöht den Abschnittszähler */
+  content: "Seite " counter(section) ": ";      /* Zeigt den Zähler an */
+}
+
+pb{
+    -oxy-display-tags:none;
+}
+
+reg{
+    -oxy-display-tags:none;
+}
+
+orig{
+    display:none;
+}
+
+orig > lg {
+    display:none;
+    -oxy-display-tags:none;
 }
 
 persName surname:after {
@@ -34,9 +58,6 @@ text {
     margin:2em;
 }
 
-pb {
-    display:none;
-}
 
 div[type="chapter"]{
     display:block;
@@ -50,14 +71,19 @@ ab{
 
 ab[type="woodcut"]{
     background-color:#bcaaa4;
+
 }
 
 ab[type="mainText"]{
     background-color:#c5e1a5;
+     -oxy-display-tags:none;
+      margin:0px;
 }
 
 ab[type="chapterTitle"]{
     background-color:#558b2f;
+    font-weight:bold;
+    font-size:1.5em;
 }
 
 ab[type="motto"]{
@@ -78,17 +104,28 @@ head {
     font-size:1.2em;
     margin-bottom:0.5em;
 }
+
 lg {
-    display:block;
+    -oxy-display-tags:none;
     margin-bottom:0.5em;
 }
+
 l {
+    -oxy-display-tags:none;
     display:block;
 }
+
 hi[rend="italic"] { 
     font-style:italic;
     -oxy-display-tags:none;
 }
+
+ref {
+    -oxy-display-tags:none;
+    color:blue;
+    text-decoration:underline;
+}
+
 hi[rend="bold"] { 
     font-weight:bold;
     -oxy-display-tags:none;
