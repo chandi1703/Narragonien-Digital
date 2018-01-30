@@ -10,6 +10,8 @@
             <xsl:apply-templates select="@* | node()"/>
         </xsl:copy>
     </xsl:template>
+    
+    <xsl:template match="lg/*[not(node())]"/>
 
     <!-- Match line-Element -->
     <xsl:template match="l">

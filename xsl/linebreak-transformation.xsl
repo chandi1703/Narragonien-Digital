@@ -34,11 +34,12 @@
 
                     <!-- make a group out of everything inside of p, ending with a linebreak -->
                     <xsl:for-each-group select="node()" group-ending-with="lb">
-                            
-                            <!-- wrap line around current-group -->
-                            <l>
-                                <xsl:apply-templates select="current-group()"/>
-                            </l>
+
+                                <!-- wrap line around current-group -->
+                                <l>
+                                    <xsl:apply-templates select="current-group()"/>
+                                </l>
+
                     </xsl:for-each-group>
                 </lg>
 
