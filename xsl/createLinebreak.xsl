@@ -22,7 +22,7 @@
         <xsl:choose>
             <xsl:when test="contains($text, '&#xa;')">
                 <xsl:value-of select="substring-before($text, '&#xa;')"/>
-                <br/>
+                <lb/>
                 <xsl:call-template name="break">
                     <xsl:with-param 
                         name="text" 
