@@ -10,6 +10,8 @@
             <xsl:apply-templates select="@* | node()"/>
         </xsl:copy>
     </xsl:template>
+    
+    <!-- blabla  -->
    
     <xsl:template match="orig">
         <xsl:copy>
