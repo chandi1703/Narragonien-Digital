@@ -1,0 +1,11 @@
+{
+  "regL":"dummyregL,dummy2regL",
+  "origL":"dummyorigL,dummy2origL",
+  "facsL":"dummyfacsL,dummy2facsL",
+  "dummyregL":"P5regL,P20regL",
+  "dummy2regL":"B1regL,B2regL",
+  "dummyorigL":"P5origL,P20origL",
+  "dummy2origL":"B1origL,B2origL",
+  "dummyfacsL":"P5facsL,P20facsL",
+  "dummy2facsL":"B1facsL,B2facsL"
+}

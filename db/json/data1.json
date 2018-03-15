@@ -1,0 +1,8 @@
+{
+    "dummy": "P5,P20",
+    "dummy2": "B1,B2",
+    "P5":"P5orig,P5reg,P5facs",
+    "P20":"P20orig,P20reg,P20facs",
+    "B1":"B1reg,B1orig,B1facs",
+    "B2":"B2orig,B2reg,B2facs"
+}
