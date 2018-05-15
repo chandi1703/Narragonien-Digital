@@ -1,9 +1,9 @@
 <div xmlns="http://www.w3.org/1999/xhtml" data-template="templates:surround" data-template-with="templates/page.html" data-template-at="content">
     <div class="row">
 
-
-        <div class="container">
+       <div class="container">
             <div class="row">
+                
                 <select id="json1" class="chosen-select" data-placeholder="Fassung wählen">
                     <option value=""/>
                     <option value="facsL">Faksimile</option>
@@ -15,11 +15,21 @@
                     <div data-template="app:selectGw"/>
                 </select>
                 
+                <select id="json3" class="chosen-select" data-placeholder="Kapitel wählen">
+                    <div data-template="app:selectCh"/>
+                </select>
+                
             </div>
+           
+           <div class="row">
+               
+               <div id="regL">
+                   <!-- data-template-version takes $version-parameter from xQuery function -->
+                   <div data-template="dch:loadCh" data-template-version="regL"/>
+               </div>
+               
+           </div>
         </div>
-
-
-        <script> $(function(){$('.chosen-select').chosen();});</script>
-
+        
     </div>
 </div>

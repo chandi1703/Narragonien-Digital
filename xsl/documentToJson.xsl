@@ -32,7 +32,7 @@
             <xsl:if test="position() = 1">
                 <xsl:text>"</xsl:text>
             </xsl:if>
-            <xsl:value-of select="concat(//idno[@resp = 'GW'], $variable)"/>
+            <xsl:value-of select="concat('GW',//idno[@resp = 'GW'], $variable)"/>
             <xsl:choose>
                 <xsl:when test="position() != last()">
                     <xsl:text>,</xsl:text>
@@ -52,7 +52,7 @@
         <xsl:for-each select="$documents">
             <xsl:text>"</xsl:text>
             <xsl:variable name="gw">
-                <xsl:value-of select="//idno[@resp = 'GW']"/>
+                <xsl:value-of select="concat('GW',//idno[@resp = 'GW'])"/>
             </xsl:variable>
             <xsl:value-of select="$gw"/>
             <xsl:value-of select="$variable"/>
