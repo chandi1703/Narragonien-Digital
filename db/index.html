@@ -1,0 +1,25 @@
+<div xmlns="http://www.w3.org/1999/xhtml" data-template="templates:surround" data-template-with="templates/page.html" data-template-at="content">
+    <div class="row">
+
+
+        <div class="container">
+            <div class="row">
+                <select id="json1" class="chosen-select" data-placeholder="Fassung wählen">
+                    <option value=""/>
+                    <option value="facsL">Faksimile</option>
+                    <option value="regL">Normalisierte Lesefassung</option>
+                    <option value="origL">OCR des Original</option>
+                </select>
+                
+                <select id="json2" class="chosen-select" data-placeholder="GW wählen">
+                    <div data-template="app:selectGw"/>
+                </select>
+                
+            </div>
+        </div>
+
+
+        <script> $(function(){$('.chosen-select').chosen();});</script>
+
+    </div>
+</div>
