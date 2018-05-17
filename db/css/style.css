@@ -1,6 +1,6 @@
 @font-face {
     font-family: andron;
-    src: url(../fonts/ANDRON%20SCRIPTOR%20WEB.TTF);
+    src: url(../fonts/Andron.ttf);
 }
 
 @font-face{
@@ -8,31 +8,32 @@
     src: url(../fonts/MEDICI%20TEXT.TTF);
 }
 
+
 body { font: 14px ;
   font-family:andron;
-  background: lightgrey;
+  background: #f9f9f9;
  }
 
-#page-wrap {
+#pagewrap {
    height: 98%;
-  width: 1111px; 
+  width: 100%; 
   margin: 60px auto;}
   
  #left{
-    float: left;
-    width: 50%;
+    width: 40%;
     background: darkgrey;
     height: 75%;
     overflow: scroll;
+    position:fixed;
  }
  
- #right {
+/* #right {
     float:left;
     width: 50%;
     background: lightblue;
     height: 75%;
     overflow: scroll;
-}
+}*/
 
 h1 { 
   font-family:medici;
@@ -40,12 +41,19 @@ h1 {
   font-weight:bold;
   margin-bottom:1.5em;}
 
+h2{
+  font: 14px Arial, sans-serif;
+  color:#fff;
+  padding: 10px;
+  text-align: center;
+}
+
 .hide {
     display: none;
 }
 
-.chapter, .chapterR{
-    margin:5%;
+.chapterL, .chapterR{
+    margin:7%;
 }
 
 .facsimile{
@@ -53,3 +61,12 @@ h1 {
     margin:2%;
     float:left;
 }
+/*
+#left{
+    float: left;
+    /\*width:50%;
+    height:75%;*\/
+    background:lightblue;
+    overflow:scroll;
+    position:fixed;
+}*/
