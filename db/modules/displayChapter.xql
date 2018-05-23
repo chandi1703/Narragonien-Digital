@@ -12,7 +12,7 @@ declare function dch:loadCh($node as node(), $model as map(*), $version as xs:st
            let $uri := util:unescape-uri(replace(base-uri($document), '.+/(.+).xml$', '$1'), 'UTF-8')
            return
                             
-           (: in Werke aufsplitten :)
+           (: in Werke aufsplitten :)       
            <div id="{concat($uri,$version)}" class="GWL">
            {
                for $chapter in $document//div[@type = 'chapter']
@@ -21,19 +21,30 @@ declare function dch:loadCh($node as node(), $model as map(*), $version as xs:st
                                         
                (: normalisierte Kapitel in GW einfügen, nicht anzeigen, erst nach Auswahl; siehe CSS :)
                <div id="{concat($uri,$id,$version)}" class="chapterL" style="display:none">
+                        
                        {
-                       
                        (: ermöglicht Einbindung der verschiedenen Varianten in einer Funktion :)
+                       
                        switch($path)
                             case "reg" return (                    
                                 for $line in $chapter//reg//l
                                 return
-                                 <p>{string($line/@n), string($line)}</p>)
+                                 <p>
+                                 <div class="row">
+                                        <div id="line" class="col-sm-2">{string($line/@n)}</div>
+                                        <div id="text" class="col-sm-10">{string($line)}</div>
+                                 </div>
+                                 </p>)
                        
                             case "orig" return (
                                 for $line in $chapter//orig//l
                                 return
-                                 <p>{string($line/@n), string($line)}</p>)
+                                 <p>
+                                 <div class="row">
+                                        <div id="line" class="col-sm-2">{string($line/@n)}</div>
+                                        <div id="text" class="col-sm-10">{string($line)}</div>
+                                 </div>
+                                 </p>)
                        
                             default return "Something went horribly wrong here"
                        }
